@@ -24,15 +24,21 @@
                 transform: scale(1.1);
             }
         }
+        
+        table{
+            border-collapse: collapse;
+            position: fixed;
+            color: white;
+            top: 50px;
+            left: 50px;
+            border-bottom-color: #9ff5ff;
+            border-radius: 20%;
+        }
         .pvz{
             background-image:linear-gradient(
                 #FFF476,#A15727
             );
             border-radius: 20px;
-        }
-        game{
-            position: absolute;
-            top: 100px;
         }
         .game{
             transform: scale(1.0);
@@ -41,20 +47,33 @@
             animation: scale 0.1s ease-in-out;
             transform: scale(1.1);
         }
+        table, th, td {
+            border: 1px solid black;
+        }
+        caption{
+            left:1px;
+        }
     </style>
 </head>
 <body>
     <logo><img class="logo" src="../image/logo.png" alt=""></logo>
     <header class="glow">
         <index class="header" onclick="window.location.href='../index.html'" type="button">主页</index>
-        <download class="header" onclick="window.location.href='./index.html'"type="button">下载</download>
+        <download class="header" onclick="window.location.href='./index.html'"type="button">游戏</download>
         <chat class="header" onclick="window.location.href='../chat.html'"type="button">联系我们</chat>
         <donate class="header" onclick="window.location.href='../donate.html'"type="button">投喂</donate>
     </header>
-    <game>
-        <a href="./game_files/greenman.zip"><img class="game" src="../image/g.png" alt="Greenman"></a>
-        <a href="./game_files/Ninja GayDen.zip"><img class="game" src="../image/n.png" alt="Ninja Gaiden"></a>
-        <a href="./game_files/PVZ.zip"><img class="pvz game" src="../image/PVZ.png" alt="Plant VS Zombie"></a>   
-    </game>
+    <table>
+    <caption>
+        <h1>游戏</h1>
+    </caption>
+    <tr>
+        <td>
+            <a href="./game_files/greenman.zip"><img class="game" src="../image/g.png" alt="Greenman"></a>
+            <a href="./game_files/Ninja GayDen.zip"><img class="game" src="../image/n.png" alt="Ninja Gaiden"></a>
+            <a href="./game_files/PVZ.zip"><img class="pvz game" src="../image/PVZ.png" alt="Plant VS Zombie"></a>
+        </td>
+    </tr>
+    </table>
 </body>
 </html>
