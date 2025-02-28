@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon.png">
+    <title>𝒪𝒸ℯ𝒶𝓂</title>
+    <style>
+        
+        .una{
+        padding: 10px 25px;
+        background-color:rgba(0, 100, 255, 0.3);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        font-size: 15px;
+        color: rgba(255,255,255,0.5);
+        }
+        .button02{
+            border-radius: 20px;
+            padding-left: -1.5px;
+            padding-right: -1.5px;
+            padding: 10px 20px;
+            background-color:rgba(0, 100, 255, 0.8);
+            border: none;
+            display: inline-block;
+        }
+        .input01{
+            border: none;
+            padding: 5px 12px;
+            border-radius: 10px;
+            background-color: rgb(43, 43, 43);
+        }
+        .input01[type="text"]{
+            color: whitesmoke;
+        }
+        .input01[type="password"]{
+            color: whitesmoke;
+        }
+        .form01{
+            padding-left: 5%;
+            padding-right: 95%;
+        }
+        fieldset{
+            padding-left: 35px;
+            padding-right: 35px;
+		    height: 350px;
+            margin-top: 100px;
+            border-radius: 30px;
+            background-color: rgb(14,15,16,0.7);
+            align-items: center;
+        }
+        div01-a{
+            padding-left: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <ul class="nav01">
+                <li><a href="./index.html">Index</a></li>
+                <li><a href="./files.html">Files</a></li>
+                <li><a href="https://space.bilibili.com/1144126402" target="_blank">BiliBili</a></li>
+            </ul>
+        </nav>
+        <a href="./login.html"><button class="una button01" disabled>Login</button></a>
+    </header>
+    <div>
+        <form class="form01" action="" method="post">
+            <fieldset>
+                <legend style="color: #929295;font-size: 30px; text-align: center;">Login</legend>
+                <label for=""><span style="color: rgba(255, 255, 255, 0.4);">Accouint:</span><br><input placeholder="type accouint" class="input01" type="text" name="userid" size="50"></label><br>
+                <label for=""><span style="color: rgba(255, 255, 255, 0.4);">Password:</span><br><input placeholder="type password" class="input01" type="password" name="password" size="50"></label><br><br>
+                <a href="" style="color: #929295;text-decoration: none;">Forget password or accouint</a><br><br>
+                <label for="" style="color: #929295;"><input type="checkbox" name="" id="" value=""><a href="">I read and agree the terms</a></label><br><br>
+                <input class="button02" type="submit" value="Submit"><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span><input class="button02" type="reset" value=" Reset ">
+            </fieldset>
+        </form>
+    </div>
+  </body>
+</html>
