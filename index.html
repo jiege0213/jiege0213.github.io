@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="./style.css">
-  <script>
-    (function () {
-      var VERSION = 'v20240101'; // 每次发版改这个
-      var KEY = 'app_version';
-    
-      if (localStorage.getItem(KEY) !== VERSION) {
-        // 1. 清业务缓存
-        localStorage.clear();
-        sessionStorage.clear();
-    
-        // 2. 清 Service Worker
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.getRegistrations().then(function (regs) {
-            regs.forEach(function (r) { r.unregister(); });
-          });
-        }
-        if ('caches' in window) {
-          caches.keys().then(function (keys) {
-            keys.forEach(function (k) { caches.delete(k); });
-          });
-        }
-    
-        // 3. 记录版本，防止无限刷新
-        localStorage.setItem(KEY, VERSION);
-    
-        // 4. 强制重载一次
-        location.reload(true);
-      }
-    })();
-    </script>
   <title>0ceam</title>
   <style>
     .p1{
@@ -56,6 +26,9 @@
   </style>
 </head>
   <body>
+    <video muted loop autoplay style=" width: 100%;height: auto;position: fixed; z-index: -1;">
+      <source src="./assets/megumi.mp4">
+    </video>
     <div class="nav">
       <ul class="navlist">
         <li><a href="./index.html">Home</a></li>
