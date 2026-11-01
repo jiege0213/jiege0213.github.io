@@ -1,0 +1,22 @@
+
+
+html{
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color: none;
+    background-color: rgb(0, 0, 0,0.75);
+    background-image:url(./assets/images/Background_1.png);
+}
+nav{
+    margin-top: 10px;
+}
+nav a {
+    margin-inline: 0px;
+    color: black;
+    padding-inline: 20px;
+    background-color: #ccc;
+}
+
+    .page { display: none; padding: 10px; border: 1px solid #ccc; margin-top: 10px;margin-inline: 15%;padding-block: 100px;padding-inline: 50px;border-radius: 50px; background-color: rgba(255, 255, 255, 0.267);}
+    .page.active { display: grid; color: white; }

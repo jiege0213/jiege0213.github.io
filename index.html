@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#/index">index</a>
+        <a href="#/about">about</a>
+    </nav>
+    <div id="index" class="page"><h1>Index</h1><p>text</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+    <div id="about"class="page" ><h1>about</h1><p>text</p><br><div><a href="./scripts/cookie.json" download="cookie.json">cookie.json</a></div></div>
+    <script>
+        // 路由表：hash 路径 -> 页面 id
+        const routes = {
+            '/index': 'index',
+            '/about': 'about',
+            '/contact': 'contact'
+        };
+
+        function router() {
+            // 取出 hash，例如 "#/about" -> "/about"
+            let path = location.hash.slice(1) || '/index';
+
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+            // 显示匹配的页面，找不到就回退到首页
+            const pageId = routes[path] || 'index';
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // 监听 hash 变化
+        window.addEventListener('hashchange', router);
+
+        // 首次加载时执行
+        window.addEventListener('load', router);
+    </script>
+</body>
+
+</html>
