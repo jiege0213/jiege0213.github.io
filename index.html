@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <link rel="icon" href="./assets/images/favicon.png">
+    <title>𝑍𝐸𝑂</title>
 </head>
 
 <body>
     <nav>
-        <a href="#/index">index</a>
-        <a href="#/about">about</a>
+        <a href="#/index"><span>Index</span></a>
+        <a href="#/about"><span>About</span></a>
+        <a href="https://space.bilibili.com/1144126402" target="_blank"><span>Bilibili</span></a>
+        <a href="https://steamcommunity.com/profiles/76561199196480008/" target="_blank" class="nav_right"><span>Steam</span></a>
     </nav>
-    <div id="index" class="page"><h1>Index</h1><p>text</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-    <div id="about"class="page" ><h1>about</h1><p>text</p><br><div><a href="./scripts/cookie.json" download="cookie.json">cookie.json</a></div></div>
+    <div id="index" class="page" style="text-align: center;"><h1 style="font-size: 150px;">𝑍𝐸𝑂</h1></div>
+    <div id="about"class="page" ><h1>About</h1><h3>File:</h3><a href="./scripts/cookie.json" download="cookie.json">cookie.json</a></div>
     <script>
         // 路由表：hash 路径 -> 页面 id
         const routes = {
             '/index': 'index',
             '/about': 'about',
-            '/contact': 'contact'
         };
 
         function router() {

@@ -1,22 +1,102 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+* a{
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}
 
-
-html{
+/* 背景图 + 半透明黑色遮罩 */
+html {
+    background-image: url(./assets/images/Background_1.png);
     background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-size:cover;
-    background-color: none;
-    background-color: rgb(0, 0, 0,0.75);
-    background-image:url(./assets/images/Background_1.png);
-}
-nav{
-    margin-top: 10px;
-}
-nav a {
-    margin-inline: 0px;
-    color: black;
-    padding-inline: 20px;
-    background-color: #ccc;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
 }
 
-    .page { display: none; padding: 10px; border: 1px solid #ccc; margin-top: 10px;margin-inline: 15%;padding-block: 100px;padding-inline: 50px;border-radius: 50px; background-color: rgba(255, 255, 255, 0.267);}
-    .page.active { display: grid; color: white; }
+/* 用 body 伪元素做半透明遮罩，避免 background-color 叠在背景图下方 */
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 导航栏：固定定位，加上 top/left */
+nav {
+    margin-left: -20px;
+    margin-top: -10px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+nav a {
+    display: inline-block;
+    color: black;
+    background-color: #ccc;
+    padding-inline: 15px;
+    padding-block: 5px;
+    text-decoration: none;
+    position: relative;
+    transition: padding-bottom 0.3s ease,
+                background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.nav_right{
+    border-bottom-right-radius: 5px;
+}
+
+nav a span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* 只有被悬浮的那个 a 延展，且只有它的文字下移 */
+nav a:hover {
+    background-color: #cccccc4f;
+    color: #ffffff;
+    padding-bottom: 40px;   /* 背景向下延展 100px */
+    z-index: 10;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius: 5px;
+}
+
+nav a:hover span {
+    transform: translateY(160%);   /* 只有这个 a 的文字下移 100px */
+}
+/* 页面卡片 */
+.page {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 80px;          /* 给顶部固定导航留空间 */
+    margin-inline: 15%;
+    padding-block: 100px;
+    padding-inline: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.267);
+}
+
+.page.active {
+    margin-top: 300px;
+    display: grid;
+    color: white;
+}
